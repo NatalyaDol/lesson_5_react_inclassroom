@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import { Link } from 'react-router';
 
 
 export default class Layout extends Component {
@@ -8,13 +9,15 @@ export default class Layout extends Component {
                 <div className="row">
                     <div className="col-4">
                         <ul>
-                            <li><a href="/">Главная</a></li>
-                            <li><a href="/about">о нас</a></li>
-                            <li><a href="/contacts">Контакты</a></li>
+                            <li><Link to="/">Главная</Link></li>
+                            <li><Link to="/about">о нас</Link></li>
+                            <li><Link to="/contacts">Контакты</Link></li>
+                            <li><Link to="/contacts/5">Контакты number 5</Link></li>
+                            <li><Link to="/contajhkhkjhcts">No page</Link></li>
                         </ul>
                     </div>
                     <div className="col-8">
-                        подключаемый компонент 
+                        {this.props.children}
                     </div>
                 </div>    
             </div>
